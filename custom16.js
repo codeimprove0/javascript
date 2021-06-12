@@ -34,3 +34,15 @@ userName()
 let uName = userName.bind(nameObj);
 
 console.log(uName()) */
+
+ 
+let bob = {
+    _name: "Bob",
+    _friends: ["stackoverflow"],
+    printFriends:(x)=> {
+        console.log(x)
+    }
+ }
+ 
+ bob.printFriends = (bob.printFriends).bind(null,bob);
+ bob.printFriends();
